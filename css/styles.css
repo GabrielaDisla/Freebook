@@ -1,1 +1,119 @@
+/* Paleta de FreeBook */
+:root {
+  --primario: #4a2511;
+  --secundario: #8c3f19;
+  --acento: #c87d28;
+  --fondo: #f4eee6;
+  --blanco: #ffffff;
+  --texto: #1f1612;
+  --texto-suave: #5a4a42;
+  --borde: #d8c8b8;
+  --fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
+/* Reset y base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuente-principal);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--texto);
+  background-color: var(--fondo);
+}
+
+/* Encabezados y texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: var(--fuente-principal);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--primario);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--secundario);
+}
+
+a:hover {
+  color: var(--primario);
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--borde);
+  margin: 1.25rem 0;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  color: var(--texto-suave);
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: var(--fuente-principal);
+  font-size: 1rem;
+}
