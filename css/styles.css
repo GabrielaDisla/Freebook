@@ -117,3 +117,343 @@ button {
   font-family: var(--fuente-principal);
   font-size: 1rem;
 }
+
+/* Las dos páginas comparten la misma distribución y los mismos bordes. */
+.contenedor {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.header,
+.Menu,
+.Contenido_principal,
+.Pie_pagina {
+  min-width: 0;
+  border: 2px solid var(--primario);
+  padding: 20px;
+  background-color: var(--blanco);
+}
+
+.header,
+.Pie_pagina {
+  text-align: center;
+}
+
+.header p,
+.Pie_pagina p {
+  margin-bottom: 0;
+}
+
+/* El menú se acomoda en varias filas cuando falta espacio. */
+.Menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+}
+
+.Menu a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.Menu a:hover {
+  background-color: var(--fondo);
+  text-decoration: underline;
+}
+
+.Menu a[aria-current="page"] {
+  background-color: var(--primario);
+  color: var(--blanco);
+  font-weight: 700;
+}
+
+/* Reutilizamos estas clases en los botones y enlaces con aspecto de botón. */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--primario);
+  border-radius: 4px;
+  background-color: var(--primario);
+  color: var(--blanco);
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover:not(:disabled) {
+  background-color: var(--secundario);
+  color: var(--blanco);
+}
+
+.boton-secundario {
+  background-color: var(--blanco);
+  color: var(--primario);
+}
+
+.boton-secundario:hover:not(:disabled) {
+  background-color: var(--fondo);
+  color: var(--primario);
+}
+
+.boton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* El contorno permite ver qué control está seleccionado con el teclado. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--primario);
+  outline-offset: 3px;
+}
+
+.bienvenida {
+  margin-bottom: 28px;
+}
+
+/* Estos ID organizan el catálogo y su panel de categorías. */
+#catalogo {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+}
+
+#categorias {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  background-color: var(--fondo);
+}
+
+.grupo-categorias {
+  min-width: 0;
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+}
+
+.grupo-categorias legend {
+  margin-bottom: 12px;
+  padding: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primario);
+}
+
+.texto-ayuda {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+/* La etiqueta completa se puede pulsar para marcar la casilla. */
+.opciones-categoria {
+  display: grid;
+  gap: 8px;
+}
+
+.opcion-categoria {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: var(--texto);
+  cursor: pointer;
+}
+
+.opcion-categoria:hover,
+.opcion-categoria:has(:checked) {
+  border-color: var(--borde);
+  background-color: var(--blanco);
+}
+
+.filtro-categoria {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: var(--primario);
+  cursor: pointer;
+}
+
+/* Las tarjetas usan el mismo borde, espacio interior y etiqueta de categoría. */
+#libros {
+  min-width: 0;
+}
+
+.cabecera-seccion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.cabecera-seccion p {
+  margin: 0;
+}
+
+.lista-libros {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+.tarjeta-libro {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+}
+
+.tarjeta-libro h3 {
+  font-size: 1.15rem;
+}
+
+.etiqueta-categoria {
+  margin-bottom: 12px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: var(--fondo);
+  color: var(--primario);
+  font-size: 0.85rem;
+}
+
+.detalle-libro {
+  width: 100%;
+  margin-top: auto;
+}
+
+.detalle-libro summary {
+  min-height: 44px;
+  padding: 10px 0;
+  color: var(--secundario);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.detalle-libro p {
+  margin: 8px 0 0;
+}
+
+/* Al marcar categorías, mostramos los libros que coinciden con cualquiera de ellas. */
+#catalogo:has(.filtro-categoria:checked) .tarjeta-libro {
+  display: none;
+}
+
+#catalogo:has(#categoria-novela:checked) .tarjeta-libro[data-categoria="novela"],
+#catalogo:has(#categoria-fantasia:checked) .tarjeta-libro[data-categoria="fantasia"],
+#catalogo:has(#categoria-ciencia:checked) .tarjeta-libro[data-categoria="ciencia"],
+#catalogo:has(#categoria-historia:checked) .tarjeta-libro[data-categoria="historia"] {
+  display: flex;
+}
+
+/* Los campos del formulario mantienen los colores y bordes del catálogo. */
+#formulario-libro {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.aviso-formulario {
+  padding: 12px;
+  border-left: 3px solid var(--acento);
+  background-color: var(--fondo);
+  color: var(--texto-suave);
+}
+
+.fila-formulario {
+  display: grid;
+  gap: 0 16px;
+}
+
+.campo-formulario {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  margin-bottom: 18px;
+}
+
+.campo-formulario label {
+  margin: 0;
+  color: var(--texto);
+  font-weight: 600;
+}
+
+.control-formulario {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  background-color: var(--blanco);
+  color: var(--texto);
+}
+
+.control-formulario::placeholder {
+  color: var(--texto-suave);
+}
+
+textarea.control-formulario {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.control-formulario::file-selector-button {
+  margin-right: 12px;
+  padding: 8px;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  background-color: var(--fondo);
+  color: var(--primario);
+  font: inherit;
+  cursor: pointer;
+}
+
+.acciones-formulario {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* En móvil todo queda en una columna; en pantallas amplias aprovechamos el ancho. */
+@media (min-width: 600px) {
+  .lista-libros,
+  .fila-formulario {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 800px) {
+  #catalogo {
+    grid-template-columns: 210px minmax(0, 1fr);
+  }
+}

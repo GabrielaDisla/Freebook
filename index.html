@@ -8,22 +8,114 @@
     <title>FreeBook</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="contenedor">
 
-    <header>
-        <!-- Freebook -->
+    <!-- Nombre y presentación del proyecto. -->
+    <header class="header">
+        <h1>FreeBook</h1>
+        <p>Comparte. Descubre. Lee.</p>
     </header>
 
-    <nav>
-        <!-- Menú de navegación -->
+    <!-- El mismo menú conecta las dos páginas. -->
+    <nav class="Menu" aria-label="Menú principal">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="index.html#libros">Libros</a>
+        <a href="subir-libro.html">Compartir libro</a>
     </nav>
 
-    <main>
-        <!-- Contenido principal -->
+    <main class="Contenido_principal">
+        <section class="bienvenida">
+            <h2>Bienvenido a FreeBook</h2>
+            <p>Una pequeña biblioteca para descubrir y compartir lecturas.</p>
+        </section>
+
+        <!-- Las categorías quedan a la izquierda del catálogo. -->
+        <div id="catalogo">
+            <aside id="categorias" aria-label="Filtro de categorías">
+                <form id="filtros-catalogo">
+                    <fieldset class="grupo-categorias" aria-describedby="ayuda-filtros">
+                        <legend>Categorías</legend>
+                        <p class="texto-ayuda" id="ayuda-filtros">Marca una o varias. Sin marcar, se muestran todos los libros.</p>
+                        <div class="opciones-categoria">
+                            <label class="opcion-categoria" for="categoria-novela">
+                                <input class="filtro-categoria" type="checkbox" id="categoria-novela" name="categoria" value="novela" aria-controls="lista-libros">
+                                <span>Novela</span>
+                            </label>
+                            <label class="opcion-categoria" for="categoria-fantasia">
+                                <input class="filtro-categoria" type="checkbox" id="categoria-fantasia" name="categoria" value="fantasia" aria-controls="lista-libros">
+                                <span>Fantasía</span>
+                            </label>
+                            <label class="opcion-categoria" for="categoria-ciencia">
+                                <input class="filtro-categoria" type="checkbox" id="categoria-ciencia" name="categoria" value="ciencia" aria-controls="lista-libros">
+                                <span>Ciencia</span>
+                            </label>
+                            <label class="opcion-categoria" for="categoria-historia">
+                                <input class="filtro-categoria" type="checkbox" id="categoria-historia" name="categoria" value="historia" aria-controls="lista-libros">
+                                <span>Historia</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <button class="boton boton-secundario" type="reset">Limpiar filtros</button>
+                </form>
+            </aside>
+
+            <!-- Las tarjetas comparten el mismo estilo. -->
+            <section id="libros" aria-labelledby="titulo-libros">
+                <div class="cabecera-seccion">
+                    <div>
+                        <h2 id="titulo-libros">Libros</h2>
+                        <p>Lecturas de ejemplo para nuestra biblioteca.</p>
+                    </div>
+                    <a class="boton" href="subir-libro.html">Compartir un libro</a>
+                </div>
+
+                <div class="lista-libros" id="lista-libros">
+                    <article class="tarjeta-libro" data-categoria="novela">
+                        <span class="etiqueta-categoria">Novela</span>
+                        <h3>Ejemplo de libro 1</h3>
+                        <p>Una historia para descubrir nuevos personajes.</p>
+                        <details class="detalle-libro">
+                            <summary>Ver descripción</summary>
+                            <p>Esta tarjeta muestra cómo se presentará una novela en el catálogo.</p>
+                        </details>
+                    </article>
+
+                    <article class="tarjeta-libro" data-categoria="fantasia">
+                        <span class="etiqueta-categoria">Fantasía</span>
+                        <h3>Ejemplo de libro 2</h3>
+                        <p>Aventuras en lugares llenos de imaginación.</p>
+                        <details class="detalle-libro">
+                            <summary>Ver descripción</summary>
+                            <p>Esta tarjeta muestra cómo se presentará un libro de fantasía en el catálogo.</p>
+                        </details>
+                    </article>
+
+                    <article class="tarjeta-libro" data-categoria="ciencia">
+                        <span class="etiqueta-categoria">Ciencia</span>
+                        <h3>Ejemplo de libro 3</h3>
+                        <p>Ideas para entender mejor el mundo que nos rodea.</p>
+                        <details class="detalle-libro">
+                            <summary>Ver descripción</summary>
+                            <p>Esta tarjeta muestra cómo se presentará un libro de ciencia en el catálogo.</p>
+                        </details>
+                    </article>
+
+                    <article class="tarjeta-libro" data-categoria="historia">
+                        <span class="etiqueta-categoria">Historia</span>
+                        <h3>Ejemplo de libro 4</h3>
+                        <p>Un recorrido por hechos y épocas del pasado.</p>
+                        <details class="detalle-libro">
+                            <summary>Ver descripción</summary>
+                            <p>Esta tarjeta muestra cómo se presentará un libro de historia en el catálogo.</p>
+                        </details>
+                    </article>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <!-- Pie de página -->
+    <footer class="Pie_pagina">
+        <p>FreeBook · Proyecto educativo</p>
     </footer>
 
 </body>
