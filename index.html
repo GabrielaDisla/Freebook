@@ -1,13 +1,13 @@
-    
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreeBook</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body class="contenedor">
 
     <!-- Nombre y presentación del proyecto. -->
@@ -40,22 +40,27 @@
                 <form id="filtros-catalogo">
                     <fieldset class="grupo-categorias" aria-describedby="ayuda-filtros">
                         <legend>Categorías</legend>
-                        <p class="texto-ayuda" id="ayuda-filtros">Marca una o varias. Sin marcar, se muestran todos los libros.</p>
+                        <p class="texto-ayuda" id="ayuda-filtros">Marca una o varias. Sin marcar, se muestran todos los
+                            libros.</p>
                         <div class="opciones-categoria">
                             <label class="opcion-categoria" for="categoria-novela">
-                                <input class="filtro-categoria" type="checkbox" id="categoria-novela" name="categoria" value="novela" aria-controls="lista-libros">
+                                <input class="filtro-categoria" type="checkbox" id="categoria-novela" name="categoria"
+                                    value="novela" aria-controls="lista-libros">
                                 <span>Novela</span>
                             </label>
                             <label class="opcion-categoria" for="categoria-fantasia">
-                                <input class="filtro-categoria" type="checkbox" id="categoria-fantasia" name="categoria" value="fantasia" aria-controls="lista-libros">
+                                <input class="filtro-categoria" type="checkbox" id="categoria-fantasia" name="categoria"
+                                    value="fantasia" aria-controls="lista-libros">
                                 <span>Fantasía</span>
                             </label>
                             <label class="opcion-categoria" for="categoria-ciencia">
-                                <input class="filtro-categoria" type="checkbox" id="categoria-ciencia" name="categoria" value="ciencia" aria-controls="lista-libros">
+                                <input class="filtro-categoria" type="checkbox" id="categoria-ciencia" name="categoria"
+                                    value="ciencia" aria-controls="lista-libros">
                                 <span>Ciencia</span>
                             </label>
                             <label class="opcion-categoria" for="categoria-historia">
-                                <input class="filtro-categoria" type="checkbox" id="categoria-historia" name="categoria" value="historia" aria-controls="lista-libros">
+                                <input class="filtro-categoria" type="checkbox" id="categoria-historia" name="categoria"
+                                    value="historia" aria-controls="lista-libros">
                                 <span>Historia</span>
                             </label>
                         </div>
@@ -74,13 +79,13 @@
                     <a class="boton" href="subir-libro.html">Compartir un libro</a>
                 </div>
 
-                        <div class="lista-libros" id="lista-libros">
+                <div class="lista-libros" id="lista-libros">
 
-                        <article class="tarjeta-libro" data-categoria="novela">
-                            <img class="portada-libro" src="img/libros/novela.jpg" alt="Portada de ejemplo para novela">
-                            <span class="etiqueta-categoria">Novela</span>
-                            <h3>Ejemplo de libro 1</h3>
-                            <p>Una historia para descubrir nuevos personajes.</p>
+                    <article class="tarjeta-libro" data-categoria="novela">
+                        <img class="portada-libro" src="img/libros/novela.jpg" alt="Portada de ejemplo para novela">
+                        <span class="etiqueta-categoria">Novela</span>
+                        <h3>Ejemplo de libro 1</h3>
+                        <p>Una historia para descubrir nuevos personajes.</p>
                         <details class="detalle-libro">
                             <summary>Ver descripción</summary>
                             <p>Esta tarjeta muestra cómo se presentará una novela en el catálogo.</p>
@@ -88,7 +93,7 @@
                     </article>
 
                     <article class="tarjeta-libro" data-categoria="fantasia">
-                        <img class="portada-libro" src="img/libros/fantasia.jpg" alt="Portada de ejemplo para fantasía">    
+                        <img class="portada-libro" src="img/libros/fantasia.jpg" alt="Portada de ejemplo para fantasía">
                         <span class="etiqueta-categoria">Fantasía</span>
                         <h3>Ejemplo de libro 2</h3>
                         <p>Aventuras en lugares llenos de imaginación.</p>
@@ -129,4 +134,5 @@
     </footer>
 
 </body>
+
 </html>
