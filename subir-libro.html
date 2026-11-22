@@ -1,37 +1,80 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subir libro - FreeBook</title>
+    <title>Compartir libro - FreeBook</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="contenedor">
+<body>
 
-    <!-- Nombre y presentación del proyecto. -->
-    <header class="header">
+    <header>
         <h1>FreeBook</h1>
         <p>Comparte. Descubre. Lee.</p>
     </header>
 
-    <nav class="Menu" aria-label="Menú principal">
+    <nav>
         <a href="index.html">Inicio</a>
-        <a href="index.html#libros">Libros</a>
-        <a href="subir-libro.html" aria-current="page">Compartir libro</a>
+        <a href="subir-libro.html">Compartir libro</a>
     </nav>
 
-    <!-- El formulario se añadirá más adelante. -->
-    <main class="Contenido_principal">
-        <h2>Compartir un libro</h2>
-        <p>Aquí irá el formulario para compartir libros. Esta sección está en proceso.</p>
-        <a href="index.html#libros">Volver a los libros</a>
+    <main>
+
+        <section>
+            <h2>¡Comparte un libro!</h2>
+
+            <p>
+                Comparte tus libros digitales y ayuda
+                a otros lectores a descubrir nuevas lecturas.
+            </p>
+
+            <form action="#" method="post"
+                  enctype="multipart/form-data">
+
+                <label for="titulo">Título del libro:</label>
+                <input type="text" id="titulo" name="titulo"
+                       placeholder="Escribe el título del libro">
+
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor"
+                       placeholder="Nombre del autor">
+
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria">
+                    <option value="">Selecciona una categoría</option>
+                    <option value="fantasia">Fantasía</option>
+                    <option value="romance">Romance</option>
+                    <option value="terror">Terror</option>
+                    <option value="misterio">Misterio</option>
+                    <option value="ciencia-ficcion">Ciencia ficción</option>
+                    <option value="educacion">Educación</option>
+                </select>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion"
+                          placeholder="Describe brevemente el libro"></textarea>
+
+                <label for="archivo">Seleccionar archivo PDF:</label>
+                <input type="file" id="archivo" name="archivo"
+                       accept=".pdf,application/pdf">
+
+                <p>
+                    Comparte lo que gustes, sin embargo, el equipo analizará el PDF.
+                </p>
+
+                <button type="submit">Compartir libro</button>
+                <button type="reset">Limpiar formulario</button>
+
+            </form>
+        </section>
+
     </main>
 
-    <footer class="Pie_pagina">
-        <p>FreeBook · Proyecto educativo</p>
+    <footer>
+        <p>FreeBook - Comparte. Descubre. Lee.</p>
     </footer>
 
 </body>
 </html>
-
