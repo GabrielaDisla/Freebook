@@ -129,9 +129,9 @@ button {
 }
 
 .header,
-.Menu,
-.Contenido_principal,
-.Pie_pagina {
+.menu,
+.contenido-principal,
+.pie-pagina {
   min-width: 0;
   border: 2px solid var(--primario);
   padding: 20px;
@@ -139,24 +139,24 @@ button {
 }
 
 .header,
-.Pie_pagina {
+.pie-pagina {
   text-align: center;
 }
 
 .header p,
-.Pie_pagina p {
+.pie-pagina p {
   margin-bottom: 0;
 }
 
 /* El menú se acomoda en varias filas cuando falta espacio. */
-.Menu {
+.menu {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   padding: 12px;
 }
 
-.Menu a {
+.menu a {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -164,12 +164,12 @@ button {
   text-decoration: none;
 }
 
-.Menu a:hover {
+.menu a:hover {
   background-color: var(--fondo);
   text-decoration: underline;
 }
 
-.Menu a[aria-current="page"] {
+.menu a[aria-current="page"] {
   background-color: var(--primario);
   color: var(--blanco);
   font-weight: 700;
